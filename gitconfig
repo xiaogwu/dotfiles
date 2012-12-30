@@ -1,0 +1,17 @@
+[user]
+	name = Xiao G. Wu
+	email = xiaogwu@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[color "status"]
+	changed = yellow
+	added = green
+	untracked = red
+[web]
+	browser = open
+[core]
+	editor = 'mvim -f'
+[credential]
+	helper = osxkeychain
