@@ -2,6 +2,7 @@
 	name = Xiao G. Wu
 	email = xiaogwu@gmail.com
 [color]
+    ui = auto
 	diff = auto
 	status = auto
 	branch = auto
@@ -15,3 +16,10 @@
 	editor = 'mvim -f'
 [credential]
 	helper = osxkeychain
+[alias]
+	st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
