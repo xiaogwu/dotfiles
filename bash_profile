@@ -14,13 +14,15 @@ alias lla='ll -a'
 alias lltr='ll -tr'
 alias llrt='ll -rt'
 alias llart='ll -art'
-alias ebp="mvim $HOME/.bash_profile"
+#alias ebp="mvim $HOME/.bash_profile"
+alias ebp="subl $HOME/.bash_profile"
 alias sbp="source $HOME/.bash_profile"
 alias evrc="mvim $HOME/.vimrc"
 
 #Application Aliases
 alias vim='/usr/local/Cellar/macvim/*/MacVim.app/Contents/MacOS/Vim'
 alias mvimt='mvim --remote-tab'
+alias sqlite3='/usr/local/Cellar/sqlite/*/bin/sqlite3'
 eval "$(hub alias -s)"
 
 #Git Aliases
@@ -66,11 +68,12 @@ eval "$(hub alias -s)"
 
 #PATH
 # export PATH="/Developer/Applications/Google/android-sdk-mac_x86/tools:/Developer/Applications/Google/android-sdk-mac_x86/platform-tools:~/bin:$JUNIT_HOME:${PATH}:$HOME/.rvm/bin:~/bin"
-# PATH="${PATH}:"
 
-#$HOME bin Path
-PATH="${PATH}:~/bin:~/Applications"
-export PATH
+# Android Development Tools
+export PATH="${PATH}:/Applications/adt-bundle-mac-x86_64-20130219/sdk/tools:/Applications/adt-bundle-mac-x86_64-20130219/sdk/platform-tools"
+
+#$HOME bin and Applications Path
+export PATH="${PATH}:~/bin:~/Applications"
 
 #Prompt
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -90,6 +93,10 @@ export VISUAL=mvim
 #RVM
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+#rbenv
+#eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 #Virtualenv
 #export WORKON_HOME=$HOME/.virtualenvs
 #export PROJECT_HOME=$HOME/Development
@@ -98,3 +105,7 @@ export VISUAL=mvim
 #Startup commands
 # Update brew if any formulaes are outdated
 #[ -n "$(brew outdated --quiet)" ] && brew upgrade
+
+### Added by the Heroku Toolbelt
+#export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="${PATH}:/usr/local/heroku/bin"

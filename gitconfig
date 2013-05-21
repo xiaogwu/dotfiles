@@ -13,7 +13,7 @@
 [web]
 	browser = open
 [core]
-	editor = 'mvim -f'
+	editor = 'subl -f'
 [credential]
 	helper = osxkeychain
 [alias]
