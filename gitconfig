@@ -23,3 +23,5 @@
     co = checkout
     df = diff
     lg = log -p
+[hub]
+	protocol = https
