@@ -25,3 +25,5 @@
     lg = log -p
 [hub]
 	protocol = https
+[push]
+	default = simple
