@@ -13,7 +13,7 @@
 [web]
 	browser = open
 [core]
-	editor = 'subl -f'
+	editor = "subl -n -w"
 [credential]
 	helper = osxkeychain
 [alias]
