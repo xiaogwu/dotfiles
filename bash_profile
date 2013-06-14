@@ -5,6 +5,19 @@ set -o vi
 export PATH=''
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin"
 
+# System Exports
+export VISUAL=vim
+export EDITOR=vi
+
+# History Setup
+export HISTFILESIZE=10000
+export HISTSIZE=10000
+shopt -s histappend
+export PROMPT_COMMAND='history -a'
+export HISTIGNORE="&:[ ]*:exit:?:??"
+export HISTCONTROL=ignoreboth
+export HISTTIMEFORMAT='%F %T '
+
 # Functions
 mkcd () { mkdir -p "$@" && cd "$@"; }
 
@@ -22,6 +35,7 @@ alias llart='ll -art'
 # Convenience Aliases
 alias ebp="subl $HOME/.bash_profile"
 alias sbp="source $HOME/.bash_profile"
+alias egc="subl $HOME/.gitconfig"
 
 # Application Aliases
 alias git=hub
