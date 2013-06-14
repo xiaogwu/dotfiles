@@ -16,6 +16,7 @@
 	editor = "subl -n -w"
 	autocrlf = input
 	safecrlf = true
+	excludesfile = /Users/xiaogwu/.gitignore_global
 [credential]
 	helper = osxkeychain
 [alias]
@@ -25,6 +26,9 @@
     co = checkout
     df = diff
     lg = log -p
+    lgp1 = log --pretty=oneline
+    h = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    ha = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --all
 [hub]
 	protocol = https
 [push]
