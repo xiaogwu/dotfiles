@@ -4,6 +4,7 @@ set -o vi
 # PATH
 export PATH=''
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin"
+export PATH="$PATH:$HOME/.rvm/bin"
 
 # System Exports
 export VISUAL=vim
@@ -47,3 +48,6 @@ fi
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 PS1='\[\033[1;34m\]\u\[\033[0m\]@\h:\w$(__git_ps1 "(%s)")\$ '
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
