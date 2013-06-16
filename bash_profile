@@ -4,7 +4,7 @@ set -o vi
 # PATH
 export PATH=''
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin"
-export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM bin to $PATH
 
 # System Exports
 export VISUAL=vim
