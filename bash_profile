@@ -40,6 +40,8 @@ alias egc="subl $HOME/.gitconfig"
 
 # Application Aliases
 alias git=hub
+alias type='type -a'
+alias sqlite3='/usr/local/Cellar/sqlite/*/bin/sqlite3'
 
 # Prompt
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
