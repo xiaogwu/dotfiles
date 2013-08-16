@@ -2,7 +2,7 @@
 
 DOTFILES=$HOME/dotfiles
 
-for file in $(ls -1 | grep -v "bootstrap.sh" | grep -v "README"); do
+for file in $(ls -1 | grep -v "bootstrap.sh" | grep -v "README" | grep -v ".sublime-settings"); do
     if [ -L "$HOME/.$file" ]; then
         ln -siv "$DOTFILES/$file" "$HOME/.$file"
         continue
