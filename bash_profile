@@ -3,8 +3,12 @@ set -o vi
 
 # PATH
 export PATH=''
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin"
+export PATH="/usr/local/bin" # Make Homebrew first
+export PATH="$PATH:~/bin"
+export PATH="$PATH:/Applications/Postgres.app/Contents/MacOS/bin" # Add Postgres
+export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin" # System
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM bin to $PATH
+export PATH="$PATH:/usr/local/share/npm/bin" # Add npm apps
 
 # System Exports
 export VISUAL=vim
@@ -32,6 +36,7 @@ alias lla='ll -a'
 alias lltr='ll -tr'
 alias llrt='ll -rt'
 alias llart='ll -art'
+alias ..='cd ..'
 
 # Convenience Aliases
 alias ebp="subl $HOME/.bash_profile"
@@ -49,7 +54,9 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 export GIT_PS1_SHOWDIRTYSTATE=1
 
-PS1='\[\033[1;34m\]\u\[\033[0m\]@\h:\w$(__git_ps1 "(%s)")\$ '
+PS1='\[\033[1;34m\]\u\[\033[0m\]@\h:\W$(__git_ps1 "(%s)")\$ '
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/contrib/ps1_functions" ]] && source "$HOME/.rvm/contrib/ps1_functions"
+ps1_set
