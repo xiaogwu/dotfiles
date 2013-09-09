@@ -14,7 +14,7 @@
 	browser = open
 [core]
 	editor = "subl -n -w"
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true
 	excludesfile = /Users/xiaogwu/.gitignore_global
 [credential]
