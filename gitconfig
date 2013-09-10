@@ -13,7 +13,7 @@
 [web]
 	browser = open
 [core]
-	editor = "subl -n -w"
+	editor = "vim -f"
 	autocrlf = input
 	safecrlf = true
 	excludesfile = /Users/xiaogwu/.gitignore_global
