@@ -39,9 +39,9 @@ alias llart='ll -art'
 alias ..='cd ..'
 
 # Convenience Aliases
-alias ebp="subl $HOME/.bash_profile"
+alias ebp="vim $HOME/.bash_profile"
 alias sbp="source $HOME/.bash_profile"
-alias egc="subl $HOME/.gitconfig"
+alias egc="vim $HOME/.gitconfig"
 
 # Application Aliases
 alias git=hub
