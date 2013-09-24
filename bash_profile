@@ -50,7 +50,7 @@ alias sqlite3='/usr/local/Cellar/sqlite/*/bin/sqlite3'
 
 # Prompt
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
-	. $(brew --prefix)/etc/bash_completion
+    . $(brew --prefix)/etc/bash_completion
 fi
 export GIT_PS1_SHOWDIRTYSTATE=1
 
