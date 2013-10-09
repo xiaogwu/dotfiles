@@ -44,6 +44,7 @@ alias evrc="vim $HOME/.vimrc"
 alias sbp="source $HOME/.bash_profile"
 alias egc="vim $HOME/.gitconfig"
 alias buc="brew update && brew outdated"
+alias bud="brew upgrade && brew doctor"
 
 # Application Aliases
 alias git=hub
