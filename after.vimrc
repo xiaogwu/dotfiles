@@ -16,3 +16,6 @@ map <leader>st :if exists("g:syntax_on") <Bar>
     \ else <Bar>
     \   syntax enable <Bar>
     \ endif <CR>
+
+" Enable mouse support for NERDTree in CLI vim
+:set mouse=a
