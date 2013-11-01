@@ -41,6 +41,7 @@ alias ..='cd ..'
 # Convenience Aliases
 alias ebp="vim $HOME/.bash_profile"
 alias evrc="vim $HOME/.vimrc"
+alias emvrc="vim $HOME/vimified/after.vimrc"
 alias sbp="source $HOME/.bash_profile"
 alias egc="vim $HOME/.gitconfig"
 alias buc="brew update && brew outdated"
