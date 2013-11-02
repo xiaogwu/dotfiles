@@ -51,10 +51,12 @@ alias git=hub
 alias type='type -a'
 alias sqlite3='/usr/local/Cellar/sqlite/*/bin/sqlite3'
 
-# Prompt
+# Source Bash completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
+
+# Prompt
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 PS1='\[\033[1;34m\]\u\[\033[0m\]@\h:\W$(__git_ps1 "(%s)")\$ '
