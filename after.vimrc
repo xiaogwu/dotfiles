@@ -18,7 +18,7 @@ map <leader>st :if exists("g:syntax_on") <Bar>
     \ endif <CR>
 
 " Enable mouse support for NERDTree in CLI vim
-:set mouse=a
+set mouse=a
 
 " Tell vim to remember certain things when we exit
 "   '10  :  marks will be remembered for up to 10 previously edited files
