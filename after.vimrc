@@ -48,3 +48,11 @@ imap <c-d> <esc>ddi
 let lint_default = 0
 nmap <silent> <leader>lt :LintVimToggle
 
+" EasyBuffer
+nmap <leader>eb :EasyBufferToggle<enter>
+
+" Quick editing
+nnoremap <leader>mev <C-w>s<C-w>j:e ~/.vim/after.vimrc<cr>
+
+" Searching with vimgrep
+nnoremap <leader>fd :execute "noautocmd vimgrep /" . expand("<cword>") .  "/j **" <Bar> clast<CR>
