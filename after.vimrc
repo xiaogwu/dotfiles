@@ -18,7 +18,7 @@ map <leader>st :if exists("g:syntax_on") <Bar>
     \ endif <CR>
 
 " Enable mouse support for NERDTree in CLI vim
-:set mouse=a
+set mouse=a
 
 " Tell vim to remember certain things when we exit
 "   '10  :  marks will be remembered for up to 10 previously edited files
@@ -48,3 +48,11 @@ imap <c-d> <esc>ddi
 let lint_default = 0
 nmap <silent> <leader>lt :LintVimToggle
 
+" EasyBuffer
+nmap <leader>eb :EasyBufferToggle<enter>
+
+" Quick editing
+nnoremap <leader>mev <C-w>s<C-w>j:e ~/.vim/after.vimrc<cr>
+
+" Searching with vimgrep
+nnoremap <leader>fd :execute "noautocmd vimgrep /" . expand("<cword>") .  "/j **" <Bar> clast<CR>

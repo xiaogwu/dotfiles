@@ -51,6 +51,7 @@ alias bud="brew upgrade && brew cleanup && brew doctor"
 alias git=hub
 alias type='type -a'
 alias sqlite3='/usr/local/Cellar/sqlite/*/bin/sqlite3'
+alias pyss="python -m SimpleHTTPServer $@"
 
 # Source Bash completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
