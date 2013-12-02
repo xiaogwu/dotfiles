@@ -56,3 +56,15 @@ nnoremap <leader>mev <C-w>s<C-w>j:e ~/.vim/after.vimrc<cr>
 
 " Searching with vimgrep
 nnoremap <leader>fd :execute "noautocmd vimgrep /" . expand("<cword>") .  "/j **" <Bar> clast<CR>
+" Include dash as word
+set iskeyword+=-
+
+" Emmet modes
+let g:user_emmet_mode='inv'
+
+" Emmet filetypes
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,scss EmmetInstall
+
+" Emmet expand with tab key in inset mode
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
