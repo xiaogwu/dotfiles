@@ -65,3 +65,7 @@ autocmd FileType html,css,scss EmmetInstall
 
 " Emmet expand with tab key in inset mode
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+" Set start fold level
+set foldlevelstart=1
+
