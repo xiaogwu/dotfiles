@@ -74,3 +74,6 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 " Set start fold level
 set foldlevelstart=1
 
+" More natural splits
+set splitbelow
+set splitright
