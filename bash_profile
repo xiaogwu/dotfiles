@@ -9,6 +9,7 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/MacOS/bin" # Add Postgres
 export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin" # System
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM bin to $PATH
 export PATH="$PATH:/usr/local/share/npm/bin" # Add npm apps
+export PATH="$PATH:~/bin"
 
 # System Exports
 export VISUAL=vim
@@ -68,3 +69,4 @@ PS1='\[\033[1;34m\]\u\[\033[0m\]@\h:\W$(__git_ps1 "(%s)")\$ '
 [[ -s "$HOME/.rvm/contrib/ps1_functions" ]] && source "$HOME/.rvm/contrib/ps1_functions"
 # Requires RVM to be installed
 ps1_set
+cd ~/SFDC

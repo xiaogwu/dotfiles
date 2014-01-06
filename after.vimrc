@@ -4,6 +4,11 @@ let g:indentLine_char = '¦'
 " NERDTress Ignores
 let NERDTreeIgnore=['\.db$']
 
+" Set colorscheme options
+colorscheme molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
+
 " Set font and size
 set guifont=Monaco:h12
 

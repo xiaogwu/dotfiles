@@ -20,10 +20,26 @@
 [credential]
 	helper = osxkeychain
 [alias]
+    pl = pull
+    ps = push
+    cl = clone
 	st = status
     ci = commit
     br = branch
+    brv = branch -v
+    bra = branch --all
+    brd = branch -d
+    brD = branch -D
+    brr = branch -m
+    brR = branch -M
     co = checkout
+    cob = checkout -b
+    ft = fetch
+    up = rebase
+    rm = remote -v
+    rma = remote add
+    rmr = remote rename
+    rmd = remote remove
     df = diff
     lg = log -p
     lgp1 = log --pretty=oneline
