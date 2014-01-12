@@ -36,13 +36,13 @@
     cob = checkout -b
     ft = fetch
     up = rebase
-    rm = remote -v
-    rma = remote add
-    rmr = remote rename
-    rmd = remote remove
+    re = remote -v
+    rea = remote add
+    rer = remote rename
+    red = remote remove
     df = diff
-    lg = log -p
-    lgp1 = log --pretty=oneline
+    l = log -p
+    lp1 = log --pretty=oneline
     h = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
     ha = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --all
     restart = reset --hard HEAD
