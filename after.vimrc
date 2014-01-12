@@ -1,5 +1,7 @@
 " Set indent line character
-let g:indentLine_char = '¦'
+"let g:indentLine_char = '¦'
+let g:indentLine_char = '┆'
+"let g:indentLine_char = '▸'
 
 " NERDTress Ignores
 let NERDTreeIgnore=['\.db$']
@@ -10,12 +12,12 @@ let g:molokai_original = 1
 let g:rehash256 = 1
 
 " Set font and size
-set guifont=Monaco:h12
+set guifont=Monaco:h11
 
 " Toggle spell checking
-nmap <silent> <leader>sc :setlocal spell! spelllang=en_us<CR>
+nmap <silent> <leader>cs :setlocal spell! spelllang=en_us<CR>
 
-" Toggle syntax highlighting
+" Syntax Toggle highlighting
 map <leader>st :if exists("g:syntax_on") <Bar>
     \   syntax off <Bar>
     \ else <Bar>
@@ -49,10 +51,6 @@ augroup END
 " Custom mapping
 imap <c-d> <esc>ddi
 
-" Lint.vim
-let lint_default = 0
-nmap <silent> <leader>lt :LintVimToggle
-
 " Quick editing
 nnoremap <leader>mev <C-w>s<C-w>j:e ~/.vim/after.vimrc<cr>
 
@@ -77,3 +75,15 @@ set foldlevelstart=1
 " More natural splits
 set splitbelow
 set splitright
+
+" Disable Autosave
+set ei=FocusLost
+
+" Syntastic Settings
+let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_css_checkers=['csslint']
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
+nmap <silent> <leader>st :SyntasticToggleMode
+nmap <silent> <leader>si :SyntasticInfo
+nmap <silent> <leader>sc :SyntasticCheck
