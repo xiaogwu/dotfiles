@@ -1,7 +1,7 @@
 " Set indent line character
-"let g:indentLine_char = '¦'
-let g:indentLine_char = '┆'
+"let g:indentLine_char = '┆'
 "let g:indentLine_char = '▸'
+let g:indentLine_char = '¦'
 
 " NERDTress Ignores
 let NERDTreeIgnore=['\.db$']
@@ -15,10 +15,10 @@ let g:rehash256 = 1
 set guifont=Monaco:h11
 
 " Toggle spell checking
-nmap <silent> <leader>cs :setlocal spell! spelllang=en_us<CR>
+nmap <silent> <leader>sp :setlocal spell! spelllang=en_us<CR>
 
 " Syntax Toggle highlighting
-map <leader>st :if exists("g:syntax_on") <Bar>
+map <leader>ts :if exists("g:syntax_on") <Bar>
     \   syntax off <Bar>
     \ else <Bar>
     \   syntax enable <Bar>
@@ -51,6 +51,9 @@ augroup END
 " Custom mapping
 imap <c-d> <esc>ddi
 
+" Paste content from OS's clipboard
+nnoremap <leader>pi "*p
+
 " Quick editing
 nnoremap <leader>mev <C-w>s<C-w>j:e ~/.vim/after.vimrc<cr>
 
@@ -80,10 +83,30 @@ set splitright
 set ei=FocusLost
 
 " Syntastic Settings
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'], 'passive_filetypes': ['html', 'css', 'slim', 'js'] }
+let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers=['jshint']
 let g:syntastic_css_checkers=['csslint']
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
-nmap <silent> <leader>st :SyntasticToggleMode
-nmap <silent> <leader>si :SyntasticInfo
-nmap <silent> <leader>sc :SyntasticCheck
+nmap <silent> <leader>st :SyntasticToggleMode<CR>
+nmap <silent> <leader>si :SyntasticInfo<CR>
+nmap <silent> <leader>sc :SyntasticCheck<CR>
+
+" Reload $MYVIMRC
+nnoremap <leader>sv :so $MYVIMRC<CR>
+
+" Create new file under cursor
+map <leader>gf :e <cfile><cr>
+
+" Show Current Line Number
+set invnumber
+
+" CTRLP
+let g:ctrlp_cmd = 'CtrlPMixed'
+
+" Easybuffer
+nmap <leader><tab> :EasyBufferToggle<enter>
+
+" Scratchpad
+nnoremap <silent> <leader><leader>sp :ScratchToggle<cr>

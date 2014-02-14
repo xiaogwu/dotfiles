@@ -4,7 +4,7 @@ set -o vi
 # PATH
 export PATH=''
 export PATH="/usr/local/bin" # Make Homebrew first
-export PATH="$PATH:~/bin"
+export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/Applications/Postgres.app/Contents/MacOS/bin" # Add Postgres
 export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin" # System
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM bin to $PATH

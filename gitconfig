@@ -45,7 +45,9 @@
     lp1 = log --pretty=oneline
     h = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
     ha = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --all
-    restart = reset --hard HEAD
+    refresh = reset --hard HEAD
+    prt = remote prune -n
+    pr = remote prune
 [hub]
 	protocol = https
 [push]
