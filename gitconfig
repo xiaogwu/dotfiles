@@ -17,6 +17,7 @@
 	autocrlf = input
 	safecrlf = true
 	excludesfile = /Users/xiaogwu/.gitignore_global
+    pager = "less -r"
 [credential]
 	helper = osxkeychain
 [alias]

@@ -59,6 +59,7 @@ nnoremap <leader>mev <C-w>s<C-w>j:e ~/.vim/after.vimrc<cr>
 
 " Searching with vimgrep
 nnoremap <leader>fd :execute "noautocmd vimgrep /" . expand("<cword>") .  "/j **" <Bar> clast<CR>
+
 " Include dash as word
 set iskeyword+=-
 

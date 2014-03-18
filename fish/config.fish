@@ -51,10 +51,12 @@ alias llart='ll -art'
 
 #Convenience Aliases
 alias ebp="vim $HOME/.bash_profile"
+alias sbp="source $HOME/.bash_profile"
 alias evrc="vim $HOME/.vimrc"
 alias emvrc="vim $HOME/vimified/after.vimrc"
-alias sbp="source $HOME/.bash_profile"
 alias egc="vim $HOME/.gitconfig"
+alias efc="vim $HOME/.config/fish/config.fish"
+alias sfc=". $HOME/.config/fish/config.fish"
 alias buc="brew update; and brew outdated"
 alias bud="brew upgrade; and brew cleanup; and brew doctor"
 alias bup="brew update; and brew outdated; and brew upgrade; and brew cleanup; and brew doctor"
@@ -63,4 +65,5 @@ alias bup="brew update; and brew outdated; and brew upgrade; and brew cleanup; a
 alias git=hub
 alias type='type -a'
 alias sqlite3='/usr/local/Cellar/sqlite/*/bin/sqlite3'
+alias ag='ag -i'
 
