@@ -1,19 +1,26 @@
 #!/usr/bin/env sh
-tmux has-session -t development
+tmux has-session -t dev
 if [ $? != 0 ]; then
-  tmux new-session -s development -n server -d
-  tmux send-keys 'cd ~/SFDC' C-m
-  tmux split-window -v -t development
-  tmux send-keys -t development:1.2 'cd ~/SFDC' C-m
-  tmux new-window -n console -t development
-  tmux send-keys -t development:2 'cd ~/SFDC' C-m
-  tmux new-window -n editor -t development
-  tmux send-keys -t development 'cd ~/SFDC' C-m
-  tmux send-keys -t development 'vim' C-m
-  tmux split-window -v -p 10 -t development
-  tmux send-keys -t development:3.2 'cd ~/SFDC' C-m
-  tmux select-window -t development:3
-  tmux select-pane -U
-  tmux attach -t development
+  # Create new session and create first window for server tasks
+  tmux new-session -s dev -n server -d
+  tmux send-keys 'cd ~/dev' C-m
+  # Start app server
+  #tmux send-keys 'coffee app.coffee' C-m
+  # Split window for grunt task
+  tmux split-window -v -t dev
+  tmux send-keys -t dev:1.2 'cd ~/dev' C-m
+  #tmux send-keys 'grunt clean' C-m
+  #tmux send-keys 'grunt' C-m
+  # Create new window for editor task
+  tmux new-window -n editor -t dev
+  tmux send-keys -t dev 'cd ~/dev' C-m
+  tmux send-keys -t dev 'vim' C-m
+  # Create new window for console task
+  tmux new-window -n console -t dev
+  tmux send-keys 'cd ~/dev' C-m
+  # Select editor window
+  tmux select-window -t dev:2
+  # Attach to session
+  tmux attach -t dev
 fi
-tmux attach -t development
+tmux attach -t dev
