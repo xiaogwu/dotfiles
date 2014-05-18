@@ -49,6 +49,13 @@
     refresh = reset --hard HEAD
     prt = remote prune -n
     pr = remote prune
+    su = submodule
+    suu = submodule update --init --recursive
+    dir = !git remote -v && git branch --all
+    stc = stash create
+    stl = stash list
+    sta = stash apply
+    stb = stash branch
 [hub]
 	protocol = https
 [push]

@@ -1,12 +1,18 @@
 set fish_config_path $HOME/.config/fish
 
 if which brew >/dev/null
-    set PATH (brew --prefix)/bin (brew --prefix)/sbin $HOME/.rvm/bin /usr/local/share/npm/bin $HOME/bin $PATH
+    set PATH (brew --prefix)/bin (brew --prefix)/sbin $HOME/.rvm/bin /usr/local/share/npm/bin $HOME/bin /Applications/adt-bundle-mac-x86_64-20140321/sdk/tools /Applications/adt-bundle-mac-x86_64-20140321/sdk/platform-tools $PATH
 end
 
+# Variables
 set fish_greeting ""
-
 set -U EDITOR vim
+
+# Export Variables
+set -x ANDROID_SDK_DIR '/Applications/adt-bundle-mac-x86_64-20140321/sdk'
+set -x SALESFORCE_SDK_DIR '/Users/xiao.wu/Dropbox/dev/SFDC/SalesforceMobileSDK-Android'
+set -x NATIVE_DIR "$SALESFORCE_SDK_DIR/native"
+set -x HYBRID_DIR "$SALESFORCE_SDK_DIR/hybrid"
 
 # Functions
 function mkdir -d "Create a directory and set CWD"
@@ -38,6 +44,10 @@ function gbrr -d "Display git branches in descending order"
     end | sort -r
 end
 
+function sfc -d "Source fish config"
+    command source $HOME/.config/fish/fish.config
+end
+
 # System Aliases
 alias h='history'
 alias l='ls'
@@ -66,4 +76,8 @@ alias git=hub
 alias type='type -a'
 alias sqlite3='/usr/local/Cellar/sqlite/*/bin/sqlite3'
 alias ag='ag -i'
+alias curl='/usr/local/Cellar/curl/*/bin/curl'
+alias ant='/usr/local/Cellar/ant/*/bin/ant'
+alias eclipse='/Applications/adt-bundle-mac-x86_64-20140321/eclipse/Eclipse.app/Contents/MacOS/eclipse'
 
+rvm >/dev/null

@@ -85,7 +85,7 @@ set ei=FocusLost
 " Syntastic Settings
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'], 'passive_filetypes': ['html', 'css', 'slim', 'js'] }
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_css_checkers=['csslint']
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
